@@ -41,7 +41,7 @@ def find_school_data():
                     school_item = collections.OrderedDict()
 
     # create the csv with the school data
-    with open(filename, 'w+') as f:
+    with open(filename, 'w+', newline='') as f:
         writer = csv.DictWriter(f, ['Name', 'Address', 'Phone Number', 'Website'])
         writer.writeheader()
 
